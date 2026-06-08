@@ -5,11 +5,11 @@ services:
       - 8080:8080
     labels:
       - "com.centurylinklabs.watchtower.enable=true"
-    container_name: website
+    container_name: express_app
 
 
   watchtower:
-    image: containrrr/watchtower
+    image: nickfedor/watchtower
     environment:
       -  WATCHTOWER_POLL_INTERVAL=60 # Poll every 60 seconds
       -  WATCHTOWER_LABEL_ENABLE=true # only watch containers that have opted in
